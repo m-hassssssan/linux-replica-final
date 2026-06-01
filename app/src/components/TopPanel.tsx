@@ -42,9 +42,19 @@ const TopPanel = memo(function TopPanel() {
 
   return (
     <div
-      className="fixed top-0 left-0 right-0 z-[200] flex items-center justify-between px-2 text-xs font-medium select-none"
+      className="z-[200] select-none text-xs font-medium"
       style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        width: '100%',
         height: 28,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingLeft: 8,
+        paddingRight: 8,
         background: 'var(--bg-panel)',
         backdropFilter: 'blur(16px)',
         WebkitBackdropFilter: 'blur(16px)',
@@ -53,7 +63,7 @@ const TopPanel = memo(function TopPanel() {
       }}
     >
       {/* Left: Activities */}
-      <div className="flex items-center">
+      <div style={{ display: 'flex', alignItems: 'center' }}>
         <button
           onClick={handleActivities}
           className="h-7 px-3 rounded hover:bg-[var(--bg-hover)] transition-colors text-xs font-medium"
@@ -70,6 +80,9 @@ const TopPanel = memo(function TopPanel() {
           position: 'absolute',
           left: '50%',
           transform: 'translateX(-50%)',
+          display: 'flex',
+          alignItems: 'center',
+          height: '100%',
         }}
       >
         <span>{formattedTime}</span>
@@ -80,7 +93,7 @@ const TopPanel = memo(function TopPanel() {
       </button>
 
       {/* Right: System tray */}
-      <div className="flex items-center gap-1">
+      <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
         <button className="h-7 px-1.5 rounded hover:bg-[var(--bg-hover)] transition-colors">
           <Accessibility size={14} />
         </button>
