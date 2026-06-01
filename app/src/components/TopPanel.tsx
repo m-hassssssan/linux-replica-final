@@ -65,7 +65,12 @@ const TopPanel = memo(function TopPanel() {
       {/* Center: Clock */}
       <button
         onClick={handleClockClick}
-        className="absolute left-1/2 -translate-x-1/2 h-7 px-2 rounded hover:bg-[var(--bg-hover)] transition-colors text-xs font-medium group relative"
+        className="h-7 px-2 rounded hover:bg-[var(--bg-hover)] transition-colors text-xs font-medium group relative"
+        style={{
+          position: 'absolute',
+          left: '50%',
+          transform: 'translateX(-50%)',
+        }}
       >
         <span>{formattedTime}</span>
         {/* Tooltip */}
