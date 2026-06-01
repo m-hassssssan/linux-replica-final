@@ -73,7 +73,7 @@ const initialState: OSState = {
   theme: {
     mode: 'dark',
     accent: '#7C4DFF',
-    wallpaper: '/wallpaper-default.jpg',
+    wallpaper: 'wallpaper-default.jpg',
   },
   notifications: [],
   dockItems: createInitialDockItems(),

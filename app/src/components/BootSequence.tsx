@@ -83,7 +83,7 @@ const BootSequence = memo(function BootSequence({ onComplete }: { onComplete: ()
       {phase === PHASE_TRANSITION && (
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/wallpaper-default.jpg)' }}
+          style={{ backgroundImage: 'url(wallpaper-default.jpg)' }}
         />
       )}
 
